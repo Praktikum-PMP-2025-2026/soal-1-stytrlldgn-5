@@ -5,6 +5,7 @@
 *   Nama File           : soal1.c
 *   Deskripsi           : Periksa validitas string kurung dengan mengabaikan huruf kecil
 */
+///// 60
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
@@ -32,7 +33,7 @@ int main() {
             if (top >= 0) {
                 top--;
             } else {
-                printf("INVALID");
+                //printf("INVALID");
             }
         }
     }
@@ -45,7 +46,7 @@ int main() {
             if (top >= 0) {
                 top--;
             } else {
-                printf("INVALID");
+                //printf("INVALID");
             }
         }
     }
@@ -59,7 +60,7 @@ int main() {
             if (top >= 0) {
                 top--;
             } else {
-                printf("INVALID");
+                //printf("INVALID");
             }
         }
     }
