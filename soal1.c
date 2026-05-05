@@ -65,8 +65,11 @@ int main() {
         hapus[stack[top--]] = true;
         printf("INVALID");
     }
-    else{
+    else if(top >= 0){
         printf("VALID");
+    }
+    else {
+        printf(" ");
     }
 
     return 0;
