@@ -65,11 +65,10 @@ int main() {
     if (top >= 0){
         printf("INVALID");
     }
-    else if (top >= 0) {
-        printf("VALID");
-    }
     else {
-        printf(" ");
+        printf("VALID");
     }
     return 0;
 }
+
+//referensi dari code soal Modul 2, hari selasa, soal no 1.
