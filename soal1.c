@@ -5,20 +5,19 @@
 *   Nama File           : soal1.c
 *   Deskripsi           : Periksa validitas string kurung dengan mengabaikan huruf kecil
 */
-///// 60
+
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 #define MAX 1000
 typedef struct Node{
     char str;
-    char huruf;
+    int stack;
+    int top;
     struct Node* next;
 } Node;
 
 int main() {
     char str[MAX];
-    //bool hapus[MAX] = {false}; 
     int stack[MAX];
     int top = -1;
     if (fgets(str, MAX, stdin) == NULL) return 0;
@@ -33,7 +32,7 @@ int main() {
             if (top >= 0) {
                 top--;
             } else {
-                //printf("INVALID");
+                printf("INVALID");
             }
         }
     }
@@ -46,11 +45,10 @@ int main() {
             if (top >= 0) {
                 top--;
             } else {
-                //printf("INVALID");
+                printf("INVALID");
             }
         }
     }
-
     //untuk []
     for (int i = 0; i < n; i++) {
         if (str[i] == '[') {
@@ -60,18 +58,15 @@ int main() {
             if (top >= 0) {
                 top--;
             } else {
-                //printf("INVALID");
+                printf("INVALID");
             }
         }
     }
-
     if (top >= 0){
-        //hapus[stack[top--]] = true;
         printf("INVALID");
     }
     else {
         printf("VALID");
     }
-
     return 0;
 }
